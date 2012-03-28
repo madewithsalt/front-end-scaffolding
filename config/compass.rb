@@ -3,11 +3,11 @@
 project_type = :rails
 
 # Set this to the root of your project when deployed:
-http_path = "/webroot"
-css_dir = "/webroot/css"
+http_path = "/"
+css_dir = "css"
 sass_dir = "sass"
-images_dir = "/webroot/img"
-javascripts_dir = "/webroot/js"
+images_dir = "img"
+javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 environment = :development
