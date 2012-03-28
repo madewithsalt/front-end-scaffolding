@@ -1,0 +1,43 @@
+//* Primary SASS file */
+
+/** Compass Library **
+@import compass
+
+/* SPRITES */
+//image path borked till compass .12
+//@import "icons/*.png"
+//@include all-icons-sprites
+
+/* Color Variables */
+// Leveraging the power of SASS to keep your site's colors in one neat and tidy place.  
+@import 'colors'
+
+//* Mixins */
+//Add your own mixins here! If you use Compass you can probably delete my starter mixins.
+@import 'mixins'
+
+/* Bootstrap Styles */
+@import 'bootstrap/bootstrap'
+
+/* framework styles */
+// Base and Layout Rules. If the style:
+// 1. If removed, would bork the whole website
+// 2. Cannot be moved from it's container
+// 3. Is a global style element like h1-h5, p, ul, etc
+// It should probably go here. 
+@import 'framework'
+
+/* module styles. */
+// A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components.   */
+// If the style:
+// 1. Can potentially be moved outside it's parent box and not bork the website
+// 2. Be reusable in any way at all
+// It should probably go here. This ends up being a big file.
+@import 'modules'
+
+// Where is the 'states' file? I think that with SASS we can use the selector nesting to achieve this inside modules, and keep the related states to a module together in the same file. Anything that's considered a 'generic state' can than be considered just another module style type. This is up to you though! Add as many other SASS files as you need to keep your project organized. The larger the app or site, the more separation you may need.
+
+/* print stylesheet */
+@media print
+  @import 'print'
+

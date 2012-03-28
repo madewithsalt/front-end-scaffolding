@@ -1,0 +1,120 @@
+// Modules SASS File
+//A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. Modules sit inside Layout components.
+
+// REQUIRED: colors.sass and framework.sass file must be included before this file in your main.sass. 
+
+/** TABLE OF CONTENTS
+ *
+ * 1. Variables
+ * 2. Framework Extensions
+ * 3. MENUS
+ */
+
+
+// NOTE: You can use the variables and mixins defined in any SASS file included above this one (ie, in framework.sass) The ones here should be specific to your modules if needed.
+// ** Variables **/
+
+// *** FRAMEWORK EXTENSIONS ***
+
+
+
+/*** MENUS ***/
+#Menu
+  margin-top: 10px
+  margin-bottom: 20px
+
+/* Character Sheet VIEW */
+.charsheetHeader
+  overflow: hidden
+  hgroup
+    float: left
+    display: block
+  .btn
+    float: right
+    margin-right: 20px
+
+.levelBlock
+  overflow: hidden
+  margin-top: 10px
+  margin-bottom: 10px
+
+  h2
+    color: $VeryDarkGrey
+    text-transform: uppercase
+    font-size: 18px
+    border: 2px solid $MidGrey
+    overflow: hidden
+    padding: 0 8px
+
+    .attr
+      float: left
+    .value
+      float: right
+      text-align: right
+    input.value
+      width: 40%
+      margin: 3px
+    .incrExp
+      float: right
+      a
+        margin-left: 4px
+        padding: 0px
+        width: 20px
+
+#weightTotal
+  margin-top: 10px
+  margin-bottom: 20px
+
+#Skills
+  .table
+    td, th
+      vertical-align: middle
+  .unskilled
+    .diceIcon, .statLabel
+      display: none
+    td, th, label
+      @extend .small
+      padding: 0px
+
+  .statLabel
+    @extend .small
+  
+
+#Stats, #Attributes
+  .table
+    border-bottom: 1px solid $MidGrey
+    tr:first-child td
+      border-top: none
+      
+#Attributes
+  .table.table-narrower
+    td
+      padding: 5px
+
+/* Dice Icons */
+.diceIcon
+  display: block
+  width: 25px
+  height: 25px
+  @include background-size(contain) 
+
+.icon_D4-2
+  background: url(../images/d4_black.png) no-repeat top left
+.icon_D4
+  background: url(../images/d4_red.png) no-repeat top left
+.icon_D6
+  background: url(../images/d6_black.png) no-repeat top left
+.icon_D8
+  background: url(../images/d8_red.png) no-repeat top left
+.icon_D10
+  background: url(../images/d10_black.png) no-repeat top left
+.icon_D12
+  background: url(../images/d12_red.png) no-repeat top left
+
+/* CharacterSheet EDIT */
+#pointsAvailable
+  @extend .well
+  ul
+    list-style-type: none
+    li
+      display: inline-block
